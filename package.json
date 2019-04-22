@@ -1,0 +1,53 @@
+{
+  "name": "nunjucks-gulp",
+  "version": "1.0.0",
+  "description": "Nunjucks gulp starter theme",
+  "main": "./dist/js/app.js",
+  "scripts": {
+    "start": "gulp copy && gulp images && gulp watch"
+  },
+  "author": "Pascal Meers",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.3",
+    "css-declaration-sorter": "^4.0.1",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-beautify": "^3.0.0",
+    "gulp-cache": "^1.1.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-data": "^1.3.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-minify": "^3.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-noop": "^1.0.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "imagemin-giflossy": "^5.1.10",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "imagemin-zopfli": "^6.0.0",
+    "postcss-assets": "^5.0.0",
+    "postcss-normalize-whitespace": "^4.0.2",
+    "postcss-uncss": "^0.16.1",
+    "purify-css": "^1.2.5",
+    "uncss": "^0.16.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "barba.js": "^1.0.0",
+    "gsap": "^2.1.2"
+  }
+}

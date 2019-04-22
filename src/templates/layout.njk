@@ -1,0 +1,97 @@
+{# 
+ # @since 1.0.0
+ # @author: Pascal Meers
+ # @package: Studio45
+ #}
+
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+	{# default head tags #}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="just a 160 words long description that shows up in the search results.">
+	<title>{{page_title}}</title>
+	{# end default head tags #}
+
+	{# apple tags #}
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta content="yes" name="apple-touch-fullscreen" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1b9aaa">
+	<meta name="robots" content="index,follow" />
+	<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone4.png" />
+	<link rel="apple-touch-startup-image" href="/startup.png">
+	<link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png" />
+	{# end apple tags #}
+
+	{# open graph tags #}
+	<meta name="og:title" content="The Title For Your Site"/>
+	<meta name="og:type" content="website"/>
+	<meta name="og:url" content="https://link-to-your-site.com"/>
+	<meta name="og:image" content="https://link-to-an-image.com"/>
+	<meta name="og:site_name" content="Your Site Name Here"/>
+	<meta name="og:description" content="Your Sites Description Here"/>
+	{# end open graph tags #}
+
+	{# twitter tags #}
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@twitterhandle" />
+	<meta name="twitter:creator" content="@twitteruser" />
+	<meta property="og:url" content="https://link-to-post.com" />
+	<meta property="og:title" content="The post title" />
+	<meta property="og:description" content="a short description about the post go's here" />
+	<meta property="og:image" content="https://link-to-an-image.com" />
+	{# end twitter tags #}
+
+	{# preload and preconnect tags #}
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Abel|Raleway:200,300,400" as="style">
+	<link rel="preload" href="./assets/vendor/font-awesome/all.min.css" as="style">
+	<link rel="preload" href="./assets/css/styles-mobile.css" as="style">
+	{# end preload and preconnect tags #}
+
+	{# styles #}
+	<link href="https://fonts.googleapis.com/css?family=Abel|Raleway:200,300,400" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/vendor/font-awesome/all.min.css" media="all">
+	<link rel="stylesheet" href="./assets/css/styles-mobile.css" media="all">
+	<link rel="stylesheet" href="./assets/css/styles-tablet.css" media="(min-width: 768px)">
+	<link rel="stylesheet" href="./assets/css/styles-desktop.css" media="(min-width: 1024px)">
+	{# end styles #}
+</head>
+<body class="{{ body_class }}" itemscope itemtype="http://schema.org/WebSite">
+	{# link to your website #}
+	<link itemprop="url" href="http://www.example.com/"/>
+	{# end link to your website #}
+
+	{# optional search form will show in google results #}
+	{% include "partials/schema-search-form.njk" %}
+	{# end optional search form #}
+
+	{# schema.org aria meta #}
+	{% include "partials/aria-body.njk" %}
+	{# end schema.org aria meta #}
+
+	{# header content #}
+	{% include "partials/header.njk" %}
+	{# end header content #}
+	
+	{# main content #}
+	{% block content %} {% endblock %}
+	{# end main content #}
+
+	{# footer content #}
+	{% include "partials/footer.njk" %}
+	{# end footer content #}
+
+	{# scripts #}
+	<script src="./assets/vendor/gsap/TimelineMax.min.js"></script>
+	<script src="./assets/vendor/gsap/TweenMax.min.js"></script>
+	<script src="./assets/vendor/gsap/plugins/CSSPlugin.min.js"></script>
+	<script src="./assets/vendor/scrollmagic/ScrollMagic.min.js" defer></script>
+	<script src="./assets/js/main.min.js" defer></script>
+	{# end scripts #}
+</body>
+</html>
