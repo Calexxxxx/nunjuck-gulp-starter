@@ -1,9 +1,6 @@
 {
 	"index": {
-		"name": "Studio45",
-		"description": "Web design & development"
-	},
-	"about": {
-		"name": "About Page"
+		"name": "nunjucks starter",
+		"description": "nunjucks gulp starter theme"
 	}
 }
